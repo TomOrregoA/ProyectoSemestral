@@ -1,0 +1,44 @@
+.usuario a {
+    color: #020202;
+}
+
+.navbar {
+    background-color: #E02020;
+}
+
+.navbar-nav a {
+    color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    color: #fff !important;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none !important;
+    color: #E02020;
+}
+#carrusel{
+    background-image: linear-gradient(black, black);
+    background-blend-mode: saturation;
+}
+#contacto{
+
+    background-image: 
+        linear-gradient(black, black),
+        url("images/bg.jpg");
+    background-size: cover;
+    background-blend-mode: saturation;
+}
+footer {
+    background-color: #E02020;
+}
+
+.socialicons {
+    z-index: 1;
+    color: #020202!important;
+}

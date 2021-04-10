@@ -1,0 +1,29 @@
+Planificación Sitio WEB Caso 1
+
+
+Sitio web destinado a la muestra, exposición y venta de piezas de obra de arte de parte de los propios creadores, quienes componen un gremio de artistas.
+
+La web y el respectivo gremio tienen como nombre “Grupo Cero”.
+
+El sitio debe tener las características de una tienda web.
+
+Requerimientos:
+
+- Menú superior y logo.
+- Carrusel de imágenes. Cada imagen enlaza a una página descriptiva
+- Debe haber un buscador, para filtrar por artista, tipo de arte o concepto. Debajo de la sección quienes somos/nosotros
+- Sumado a lo anterior se debe poder elegir categoría o artista. Debajo de la sección quienes somos/nosotros
+- Se debe mostrar todos los productos ingresados por artista buscado. Debajo de la sección quienes somos/nosotros
+- Debe haber un formulario de contacto en el footer de la página
+- Menú de registro/inicio de sesión. en la esquina superior derecha, arriba del menú
+- Mostrar estatus de usuario(login) en la esquina superior derecha, arriba del menú
+- El proceso de agregar nuevas obrar no corre aún.
+- No corre la parte de ventas enlinea aún.
+- Debe ser responsiva.
+
+
+Colores: 
+
+Negro: Requerimientos.
+Azul: Anotaciones Tomás O.
+Rojo: Aparentemente no aplica para primera entrega.
