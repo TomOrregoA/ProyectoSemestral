@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .usuario a {
     color: #020202;
 }
@@ -35,10 +38,21 @@
     background-blend-mode: saturation;
 }
 footer {
+    color: white;
     background-color: #E02020;
 }
 
-.socialicons {
-    z-index: 1;
-    color: #020202!important;
+.socialicons a{
+    color: #dfdfdf;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: #dfdfdf!important;
+}
+
+.footer-nav a:hover,
+.socialicons a:hover{
+    text-decoration: none;
+    color: #ffffff!important;
 }
