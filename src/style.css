@@ -6,7 +6,7 @@ a{
 }
 
 .navbar {
-    background-color: #E02020;
+    background-color: #DC3545;
 }
 
 .navbar-nav a {
@@ -23,12 +23,47 @@ a{
     width: 50px;
     text-align: center;
     text-decoration: none !important;
-    color: #E02020;
+    color: #DC3545;
 }
-#carrusel{
-    background-image: linear-gradient(black, black);
-    background-blend-mode: saturation;
+
+.carousel-item img{
+    filter: grayscale(75%);
 }
+
+.carousel-caption{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 20%;
+    margin-left: 15%;
+    
+}
+
+.carousel-caption h5{
+    font-size: 5em;
+    text-align: left;
+    text-shadow: 2px 2px 4px black;
+}
+
+.carousel-caption p{
+    text-align: left;
+    text-shadow: 2px 2px 4px black;
+}
+
+.carousel-caption button{
+    position: absolute;
+    left: 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+.btn-outline-danger{
+    color: white;
+    border-color: whitesmoke;
+    background-image: none;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
 #contacto{
 
     background-image: 
@@ -39,7 +74,7 @@ a{
 }
 footer {
     color: white;
-    background-color: #E02020;
+    background-color: #DC3545;
 }
 
 .socialicons a{
