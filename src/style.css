@@ -56,7 +56,7 @@ a{
     text-shadow: 2px 2px 4px black;
 }
 
-.btn-outline-danger{
+.btn-carrusel{
     color: white;
     border-color: whitesmoke;
     background-image: none;
@@ -64,8 +64,31 @@ a{
     border-radius: 20px;
 }
 
-#contacto{
+.titulo {
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin: 0 0 39px;
+    padding: 0 0 11px;
+    position: relative;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+}
 
+/* .titleSection::after {
+    content: '';
+    background-color: #7FC32F;
+    display: block;
+    width: 50px;
+    height: 3px;
+    left: 50%;
+    margin-left: -25px;
+    position: absolute;
+    bottom: -15px;
+} */
+
+#contacto{
     background-image: 
         linear-gradient(black, black),
         url("images/bg.jpg");
