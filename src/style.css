@@ -1,6 +1,11 @@
-a{
+html {
+    scroll-behavior: smooth;
+}
+
+a {
     text-decoration: none;
 }
+
 .usuario a {
     color: #020202;
 }
@@ -26,37 +31,41 @@ a{
     color: #DC3545;
 }
 
-.carousel-item img{
+.carousel-item img {
     filter: grayscale(75%);
 }
+.card-img-top:hover {
+    filter: grayscale(75%);
+    transition: all 500ms ease-in-out;
+}
 
-.carousel-caption{
+.carousel-caption {
     position: absolute;
     left: 0;
     width: 50%;
     top: 20%;
     margin-left: 15%;
-    
+
 }
 
-.carousel-caption h5{
+.carousel-caption h5 {
     font-size: 5em;
     text-align: left;
     text-shadow: 2px 2px 4px black;
 }
 
-.carousel-caption p{
+.carousel-caption p {
     text-align: left;
     text-shadow: 2px 2px 4px black;
 }
 
-.carousel-caption button{
+.carousel-caption button {
     position: absolute;
     left: 0;
     text-shadow: 2px 2px 4px black;
 }
 
-.btn-carrusel{
+.btn-carrusel {
     color: white;
     border-color: whitesmoke;
     background-image: none;
@@ -76,41 +85,56 @@ a{
     text-align: center;
 }
 
-/* .titleSection::after {
+.titlesection {
+    position: relative;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.titlesection:after {
     content: '';
-    background-color: #7FC32F;
+    background-color: #DC3545;
     display: block;
-    width: 50px;
+    width: 2em;
     height: 3px;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -1em;
+    margin-top: 3px;
     position: absolute;
-    bottom: -15px;
-} */
+}
 
-#contacto{
-    background-image: 
+#nosotros {
+    background-color: #e1e1e1;
+}
+
+#image {
+    min-height: 200px;
+}
+
+#contacto {
+    background-image:
         linear-gradient(black, black),
         url("images/bg.jpg");
     background-size: cover;
     background-blend-mode: saturation;
 }
+
 footer {
     color: white;
     background-color: #DC3545;
 }
 
-.socialicons a{
+.socialicons a {
     color: #dfdfdf;
 }
 
-.footer-nav a{
+.footer-nav a {
     text-decoration: none;
-    color: #dfdfdf!important;
+    color: #dfdfdf !important;
 }
 
 .footer-nav a:hover,
-.socialicons a:hover{
+.socialicons a:hover {
     text-decoration: none;
-    color: #ffffff!important;
+    color: #ffffff !important;
 }
