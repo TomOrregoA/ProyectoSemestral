@@ -116,6 +116,19 @@ a {
     min-height: 200px;
 }
 
+.precio {
+    font-size: 2rem;
+}
+
+.oculto {
+    display: none!important;
+}
+
+.dropdown-menu > .dropdown-item:hover {
+    background-color: #DC3545; 
+    color:#ffffff;   
+}
+
 #contacto {
     background-image:
         linear-gradient(black, black),
