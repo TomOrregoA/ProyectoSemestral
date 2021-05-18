@@ -31,11 +31,14 @@
                             <a class="nav-link" href="#">SIGNUP</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                        </li>
+                        <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-outline-danger dropdown-toggle" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    Seleccionar Divisa
+                                    Moneda <i class="fas fa-money-bill"></i> 
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item divisaConv" href="#">CLP(Chile)</a>
@@ -43,10 +46,6 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                        </li>
-
                     </ul>
                 </div>
             </div>
@@ -194,8 +193,8 @@
                 <div class="col col-12 col-md-4">
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
-                            aria-label="Search" id="#buscar-artista">
-                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" id="buscar">buscar</button>
+                            aria-label="Search" id="nombreArtista">
+                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" id="buscarArtista">buscar</button>
                     </form>
                 </div>
                 <div class="col col-12 col-md-4 d-flex justify-content-end">
@@ -219,96 +218,8 @@
         <!-- Filtro -->
 
         <div class="container">
-            <div class="card-deck mb-3 text-center">
-                <!-- Card 1 -->
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Caballero y Luna</h4>
-                    </div>
-                    <div class="card-body gallery">
-                        <a class="popupimage" href="src/images/fullimages/1big.jpg">
-                            <img class="card-img-top" src="src/images/gallery/1.png" alt="El Caballero y la Luna">
-                        </a>
-                        <h1 class="precio">$<span id="valor">800</span><small
-                                class="text-muted">/ <span id="divisa">USD</span></small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Pintura al Óleo</li>
-                            <li>180cms x 100cms</li>
-                            <li id="autor">Manuel de la Cuadra</li>
-                            <li>Año 2018</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-danger">Ver Detalles</button>
-                    </div>
-                </div>
-                <!-- Card 1 -->
-
-                <!-- Card 2 -->
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Ciervo Poligonal</h4>
-                    </div>
-                    <div class="card-body gallery">
-                        <a href="src/images/fullimages/2big.jpg" class="popupimage">
-                            <img class="card-img-top" src="src/images/gallery/2.png" alt="El Caballero y la Luna">
-                        </a>
-                        <h1 class="precio">$<span id="valor">75</span><small class="text-muted">/ <span id="divisa">USD</span></small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Diseño Digital Impreso</li>
-                            <li>150cms x 95cms</li>
-                            <li id="autor">Andrea Ramírez</li>
-                            <li>Año 2020</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-danger">Ver Detalles</button>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-
-                <!-- Card 3 -->
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Olas de Colores</h4>
-                    </div>
-                    <div class="card-body gallery">
-                        <a href="src/images/fullimages/3big.jpg" class="popupimage">
-                            <img class="card-img-top" src="src/images/gallery/3.png" alt="El Caballero y la Luna">
-                        </a>
-                        <h1 class="precio">$<span id="valor">750</span><small class="text-muted">/ <span id="divisa">USD</span></small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Pinturas Mixtas</li>
-                            <li>200cms x 150cms</li>
-                            <li id="autor">Romina García</li>
-                            <li>Año 2006</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-danger">Ver Detalles</button>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-
-                <!-- Card 4 -->
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Mujer del Bosque</h4>
-                    </div>
-                    <div class="card-body gallery">
-                        <a href="src/images/fullimages/4big.jpg" class="popupimage">
-                            <img class="card-img-top" src="src/images/gallery/4.png" alt="Mujer del Bosque">
-                        </a>
-                        <h1 class="precio">$<span id="valor">1250</span><small class="text-muted">/ <span id="divisa">USD</span></small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Pintura al Óleo</li>
-                            <li>120cms x 75cms</li>
-                            <li id="autor">Gabriel Villarán</li>
-                            <li>Año 1998</li>
-                        </ul>
-                        <form action="producto1.html">
-                            <button type="submit" class="btn btn-lg btn-block btn-danger" href="productos.html">Ver
-                                Detalles</button>
-                        </form>
-                    </div>
-                </div>
-                <!-- Card 4 -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" id="mostrador">
             </div>
-
         </div>
         <!-- Modal -->
         <div class="modal fade">
