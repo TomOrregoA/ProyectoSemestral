@@ -38,7 +38,7 @@
                                 <button class="btn btn-outline-danger dropdown-toggle" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    Moneda <i class="fas fa-money-bill"></i> 
+                                    Moneda <i class="fas fa-money-bill"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item divisaConv" href="#">CLP(Chile)</a>
@@ -104,7 +104,6 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Caballero y Luna</h5>
                         <p>Autor: Manuel De la Cuadra</p>
-                        <button type="button" class="btn btn-outline-danger btn-carrusel">Ver Más</button>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -112,7 +111,6 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Ciervo Poligonal</h5>
                         <p>Autor: Andrea Ramírez</p>
-                        <button type="button" class="btn btn-outline-danger btn-carrusel">Ver Más</button>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -120,7 +118,6 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Olas de Colores</h5>
                         <p>Autor: Romina García</p>
-                        <button type="button" class="btn btn-outline-danger btn-carrusel">Ver Más</button>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -128,7 +125,6 @@
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Mujer del Bosque</h5>
                         <p>Autor: Gabriel Villarán</p>
-                        <button type="button" class="btn btn-outline-danger btn-carrusel">Ver Más</button>
                     </div>
                 </div>
             </div>
@@ -179,45 +175,46 @@
 
     <!-- Galería -->
 
-    <section id="galeria" class="smooth-scroll">
+    <section id="galeria" class="smooth-scroll my-5">
         <div class="container-fluid d-flex justify-content-center">
             <h2 class="display-4 titlesection">Galería</h2>
         </div>
 
         <!-- Filtro -->
-        <div class="container my-5">
-            <div class="row justify-content-around">
-                <div class="col col-12 col-md-4">
-                    <h5 class="navbar-brand">Filtros</h5>
+        <div class="container-fluid pt-5 px-0">
+            <h5 class="text-center p-3 text-white">Filtros</h5>
+        </div>
+        <div class="container p-4" id="filtros">
+            <div class="row">
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
+                        aria-label="Search" id="filtroArtista">
                 </div>
-                <div class="col col-12 col-md-4">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
-                            aria-label="Search" id="nombreArtista">
-                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" id="buscarArtista">buscar</button>
-                    </form>
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <select class="custom-select" id="filtroEstilo">
+                        <option>Escoja Estilo</option>
+                        <option>Realismo</option>
+                        <option>Hiperrealismo</option>
+                        <option>Surrealismo</option>
+                        <option>Impresionismo</option>
+                        <option>Expresionismo</option>
+                        <option>Arte abstracto</option>
+                        <option>Arte Pop</option>
+                    </select>
                 </div>
-                <div class="col col-12 col-md-4 d-flex justify-content-end">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger">Tipo de Arte</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Tipo de Arte</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Pintura</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Pintura Digital</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Esculturas</a>
-                        </div>
-                    </div>
+                <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                    <button class="btn btn-lg btn-block btn-outline-danger py-1" type="submit"
+                        id="btnBuscador">buscar</button>
                 </div>
             </div>
         </div>
+
         <!-- Filtro -->
 
-        <div class="container">
+        <div class="container" id="cont-mostrador">
+            <div class="row oculto justify-content-center p-5" id="mensaje">
+                <p class="text-center">No se ha encontrado la obra o el artista que busca</p>
+            </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" id="mostrador">
             </div>
         </div>
@@ -294,14 +291,14 @@
                 <!-- Grid column -->
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase">
-                        <a href="#">NOSOTROS</a>
+                        <a href="#nosotros">NOSOTROS</a>
                     </h6>
                 </div>
                 <!-- Grid column -->
                 <!-- Grid column -->
                 <div class="col-md-2 mb-3">
                     <h6 class="text-uppercase">
-                        <a href="#">GALERÍA</a>
+                        <a href="#galeria">GALERÍA</a>
                     </h6>
                 </div>
                 <!-- Grid column -->
