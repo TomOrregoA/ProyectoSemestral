@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -30,7 +30,7 @@ a {
 
 .navbar-dark .navbar-nav .nav-link:hover {
     color: black;
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
     transition: all 0.4s ease-in-out;
 }
 
@@ -58,29 +58,59 @@ a {
 .carousel-item img {
     filter: grayscale(75%);
 }
-.card-img-top:hover {
-    filter: grayscale(75%);
-    transition: all 500ms ease-in-out;
+
+.carousel-item {
+    min-height: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.carousel-caption {
+#carrusel {
+    width: 100%;
+    height: 250px;
+}
+
+@media (min-width:768px) {
+    .carousel-item {
+        min-height: 500px;
+        background-attachment: fixed;
+    }
+
+    #carrusel {
+        height: 500px;
+    }
+}
+
+/* .carousel-caption {
     position: absolute;
     left: 0;
     width: 50%;
-    top: 20%;
-    margin-left: 15%;
+    top: 60%;
 
-}
+} */
 
 .carousel-caption h5 {
-    font-size: 5em;
-    text-align: left;
+    font-size: 3rem;
+    text-align: center;
     text-shadow: 2px 2px 4px black;
 }
 
 .carousel-caption p {
-    text-align: left;
+    text-align: center;
     text-shadow: 2px 2px 4px black;
+}
+
+@media (max-width:768px) {
+    .carousel-caption {
+        font-size: 1rem;
+    }
+
+    .carousel-caption h5 {
+        text-align: center;
+        font-size: 1rem;
+    }
 }
 
 .carousel-caption button {
@@ -95,18 +125,6 @@ a {
     background-image: none;
     background-color: transparent;
     border-radius: 20px;
-}
-
-.titulo {
-    font-size: 30px;
-    letter-spacing: 0;
-    line-height: 32px;
-    margin: 0 0 39px;
-    padding: 0 0 11px;
-    position: relative;
-    text-transform: uppercase;
-    color: #000;
-    text-align: center;
 }
 
 .titlesection {
@@ -127,29 +145,42 @@ a {
     position: absolute;
 }
 
-#galeria > div > h5 {
+#filtroContainer {
+    position: relative;
+}
+
+#filtroContainer:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 0.5em;
+    width: 50%;
+    opacity: 45%;
+    border-top: 1px solid #DC3545;
+}
+
+#filtroEstilo>option:hover {
     background-color: #DC3545;
-}
-
-#filtroEstilo > option:hover{
-    background-color: #DC3545; 
-    color:#ffffff;   
-}
-
-#nosotros {
-    background-color: #e1e1e1;
+    color: #ffffff;
 }
 
 #image {
     min-height: 200px;
 }
 
-#mostrador > .card {
+#mostrador>.card {
     flex-basis: 100%;
 }
 
-#cont-mostrador #mensaje p{
+#cont-mostrador #mensaje p {
     font-size: 2rem;
+}
+
+.card-img-top:hover {
+    filter: grayscale(75%);
+    transition: all 500ms ease-in-out;
 }
 
 .precio {
@@ -157,12 +188,12 @@ a {
 }
 
 .oculto {
-    display: none!important;
+    display: none !important;
 }
 
-.dropdown-menu > .dropdown-item:hover {
-    background-color: #DC3545; 
-    color:#ffffff;   
+.dropdown-menu>.dropdown-item:hover {
+    background-color: #DC3545;
+    color: #ffffff;
 }
 
 #contacto {

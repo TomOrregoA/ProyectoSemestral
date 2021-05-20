@@ -99,30 +99,26 @@
                 <li data-target="#carrusel" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="src/images/1crop.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item active" style="background-image: url('src/images/1crop.png')">
+                    <div class="carousel-caption d-block">
                         <h5>Caballero y Luna</h5>
                         <p>Autor: Manuel De la Cuadra</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="src/images/2crop.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" style="background-image: url('src/images/2crop.png')">
+                    <div class="carousel-caption d-block">
                         <h5>Ciervo Poligonal</h5>
                         <p>Autor: Andrea Ramírez</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="src/images/3crop.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" style="background-image: url('src/images/3crop.png')">
+                    <div class="carousel-caption d-block">
                         <h5>Olas de Colores</h5>
                         <p>Autor: Romina García</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="src/images/4crop.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-item" style="background-image: url('src/images/4crop.png')">
+                    <div class="carousel-caption d-block">
                         <h5>Mujer del Bosque</h5>
                         <p>Autor: Gabriel Villarán</p>
                     </div>
@@ -141,7 +137,7 @@
     <!-- Carrousel -->
 
     <!-- About Us -->
-    <section id="nosotros" class="container-fluid mb-5 smooth-scroll">
+    <section id="nosotros" class="container-fluid mb-5 smooth-scroll bg-light">
         <div class="container py-5">
             <div class="row">
                 <div class="col col-md-6 col-12">
@@ -150,14 +146,10 @@
                             <h1 class="display-4 titlesection">Nosotros</h1>
                         </div>
                         <div>
-                            <p class="lead text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                                laborum explicabo
-                                maiores
-                                deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum
-                                excepturi
-                                odio!
-                                Aut
-                                alias obcaecati praesentium architecto quasi.
+                            <p class="lead text-justify mb-5 mb-md-0">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum explicabo maiores 
+                                deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum excepturi 
+                                odio! Aut alias obcaecati praesentium architecto quasi.
                             </p>
                         </div>
                     </div>
@@ -175,43 +167,44 @@
 
     <!-- Galería -->
 
-    <section id="galeria" class="smooth-scroll my-5">
-        <div class="container-fluid d-flex justify-content-center">
+    <section id="galeria" class="smooth-scroll">
+        <div class="container-fluid d-flex justify-content-center py-5">
             <h2 class="display-4 titlesection">Galería</h2>
         </div>
 
         <!-- Filtro -->
-        <div class="container-fluid pt-5 px-0">
-            <h5 class="text-center p-3 text-white">Filtros</h5>
-        </div>
-        <div class="container p-4" id="filtros">
-            <div class="row">
-                <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
-                        aria-label="Search" id="filtroArtista">
-                </div>
-                <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                    <select class="custom-select" id="filtroEstilo">
-                        <option>Escoja Estilo</option>
-                        <option>Realismo</option>
-                        <option>Hiperrealismo</option>
-                        <option>Surrealismo</option>
-                        <option>Impresionismo</option>
-                        <option>Expresionismo</option>
-                        <option>Arte abstracto</option>
-                        <option>Arte Pop</option>
-                    </select>
-                </div>
-                <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                    <button class="btn btn-lg btn-block btn-outline-danger py-1" type="submit"
-                        id="btnBuscador">buscar</button>
+        <div class="container-fluid pb-5 px-0" id="filtroContainer">
+            <div class="container pt-md-5 pt-0" id="filtros">
+                <h5 class="text-left text-secondary p-3 m-0">Filtros</h5>
+                <div class="row">
+                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Nombre de Artista"
+                            aria-label="Search" id="filtroArtista">
+                    </div>
+                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                        <select class="custom-select" id="filtroEstilo">
+                            <option>Escoja Estilo</option>
+                            <option>Realismo</option>
+                            <option>Hiperrealismo</option>
+                            <option>Surrealismo</option>
+                            <option>Impresionismo</option>
+                            <option>Expresionismo</option>
+                            <option>Arte abstracto</option>
+                            <option>Arte Pop</option>
+                        </select>
+                    </div>
+                    <div class="col col-12 col-md-4 mt-3 mt-md-0">
+                        <button class="btn btn-lg btn-block btn-danger py-1" type="submit"
+                            id="btnBuscador">buscar</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
 
         <!-- Filtro -->
 
-        <div class="container" id="cont-mostrador">
+        <div class="container py-4" id="cont-mostrador">
             <div class="row oculto justify-content-center p-5" id="mensaje">
                 <p class="text-center">No se ha encontrado la obra o el artista que busca</p>
             </div>
