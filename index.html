@@ -23,22 +23,24 @@
                     <img src="src/images/logo.svg" class="d-inline-block" alt="logo">
                 </a>
                 <div class="py-5">
-                    <ul class="nav usuario">
+                    <ul class="nav usuario text-danger">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">LOGIN</a>
+                            <a class="nav-link text-danger" href="#"><i class="fas fa-sign-in-alt"></i> <span
+                                    class="d-none d-md-inline-block text-dark">Ingresar</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SIGNUP</a>
+                            <a class="nav-link text-danger" href="#"><i class="fas fa-user-plus"></i> <span
+                                    class="d-none d-md-inline-block text-dark">Registrarse</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> (0)</a>
+                            <a class="nav-link text-danger" href="#"><i class="fas fa-shopping-cart"></i> <span class="text-dark" id="cartCount">(0)</span></a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
                                 <button class="btn btn-outline-danger dropdown-toggle" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    Moneda <i class="fas fa-money-bill"></i>
+                                    <span>Moneda</span> <i class="fas fa-money-bill"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item divisaConv" href="#">CLP(Chile)</a>
@@ -102,7 +104,7 @@
                 <div class="carousel-item active" style="background-image: url('src/images/1crop.png')">
                     <div class="carousel-caption d-block">
                         <h5>Caballero y Luna</h5>
-                        <p>Autor: Manuel De la Cuadra</p>
+                        <p>Autor: Manuel Fernández</p>
                     </div>
                 </div>
                 <div class="carousel-item" style="background-image: url('src/images/2crop.png')">
@@ -147,8 +149,9 @@
                         </div>
                         <div>
                             <p class="lead text-justify mb-5 mb-md-0">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum explicabo maiores 
-                                deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum excepturi 
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laborum explicabo maiores
+                                deleniti a architecto autem earum voluptas pariatur esse consectetur, voluptatum
+                                excepturi
                                 odio! Aut alias obcaecati praesentium architecto quasi.
                             </p>
                         </div>
@@ -168,7 +171,7 @@
     <!-- Galería -->
 
     <section id="galeria" class="smooth-scroll">
-        <div class="container-fluid d-flex justify-content-center py-5">
+        <div class="container-fluid d-flex justify-content-center py-3">
             <h2 class="display-4 titlesection">Galería</h2>
         </div>
 
@@ -194,13 +197,13 @@
                         </select>
                     </div>
                     <div class="col col-12 col-md-4 mt-3 mt-md-0">
-                        <button class="btn btn-lg btn-block btn-danger py-1" type="submit"
-                            id="btnBuscador">buscar</button>
+                        <button class="btn btn-lg btn-block btn-danger py-1" type="submit" id="btnBuscador"><i
+                                class="fas fa-search"></i> Buscar</button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <!-- Filtro -->
 
@@ -236,30 +239,32 @@
                     <div class="card-body">
                         <form autocomplete="off" id="formulario" action="#" method="post">
                             <p>
-                                <label class="form-check-label" for="cNombres">Nombres</label>
+                                <label class="form-check-label" for="cNombres"><i class="far fa-user-circle"></i> Nombres*</label>
                                 <input type="text" class="form-control" id="cNombres" name="cNombres" required>
                             </p>
                             <p>
-                                <label class="form-check-label" for="cApellidos">Apellidos</label>
+                                <label class="form-check-label" for="cApellidos"><i class="far fa-address-card"></i> Apellidos*</label>
                                 <input type="text" class="form-control" id="cApellidos" name="cApellidos" required>
                             </p>
                             <p>
-                                <label class="form-check-label" for="cTelefono">Teléfono (Opcional)</label>
+                                <label class="form-check-label" for="cTelefono"><i class="fas fa-phone"></i> Teléfono
+                                    (Opcional)</label>
                                 <input type="text" class="form-control" placeholder="+56 123456773" id="cTelefono"
                                     name="cTelefono">
                             </p>
                             <p>
-                                <label class="form-check-label" for="cCorreo">Correo Electrónico</label>
+                                <label class="form-check-label" for="cCorreo"><i class="far fa-envelope"></i> Correo
+                                    Electrónico*</label>
                                 <input type="email" class="form-control" placeholder="pepito@correo.com" id="cCorreo"
                                     name="cCorreo" required>
                             </p>
                             <p>
-                                <label for="exampleFormControlTextarea1">Escriba su Mensaje</label>
+                                <label for="exampleFormControlTextarea1"><i class="far fa-sticky-note"></i> Escriba su Mensaje*</label>
                                 <textarea class="form-control" id="cMensaje" name="cMensaje" rows="3" minlength="15"
                                     required></textarea>
                             </p>
-                            <input type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn"
-                                value="Enviar"></input>
+                            <button type="submit" class="btn btn-lg btn-block btn-danger" id="form-btn"
+                                value="Enviar"><i class="fas fa-paper-plane"></i> Enviar</button>
                         </form>
                     </div>
                 </div>

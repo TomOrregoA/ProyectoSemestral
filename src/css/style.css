@@ -29,7 +29,7 @@ a {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: black;
+    color: white;
     transform: scale(1.2, 1.2);
     transition: all 0.4s ease-in-out;
 }
@@ -133,6 +133,10 @@ a {
     text-align: center;
 }
 
+#nosotros {
+    position: relative;
+}
+
 .titlesection:after {
     content: '';
     background-color: #DC3545;
@@ -149,7 +153,7 @@ a {
     position: relative;
 }
 
-#filtroContainer:after {
+:is(#filtroContainer, #nosotros):after {
     content: " ";
     position: absolute;
     bottom: 0;
@@ -157,7 +161,7 @@ a {
     transform: translate(-50%);
     height: 0.5em;
     width: 50%;
-    opacity: 45%;
+    opacity: 25%;
     border-top: 1px solid #DC3545;
 }
 

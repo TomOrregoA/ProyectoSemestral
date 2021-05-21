@@ -1,13 +1,3 @@
-//Modal para las imagenes de la galería
-$(document).ready(function () {
-    $('.popupimage').click(function (event) {
-        event.preventDefault();
-        $('.modal img').attr('src', $(this).attr('href'));
-        $('.modal').modal('show');
-    });
-});
-
-
 //Función de jquery y validate que permite validar el contenido del formulario previamente a ser enviado
 $(document).ready(function () {
     $("#formulario").validate({
@@ -120,14 +110,16 @@ const obras = function (titulo, autor, imagen, precio, tecnica, medidas, annio) 
         this.annio = annio
 }
 // contenido simulación de información de backend para propositos de prueba
-const obra1 = new obras("Caballero y Luna", "Manuel de la Cuadra", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/1.png", "800", "Realismo", "180cms x 100cms", "2018");
-const obra2 = new obras("Ciervo Poligonal", "Andrea Ramírez", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/2.png", "75", "Impresionismo", "150cms x 95cms", "2020");
-const obra3 = new obras("Olas de Colores", "Romina García", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/3.png", "750", "Expresionismo", "200cms x 150cms", "2006");
-const obra4 = new obras("Mujer del Bosque", "Gabriel Villarán", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/4.png", "1250", "Surrealismo", "120cms x 75cms", "1998");
-const obra5 = new obras("Mujer del Bosque", "Gabriel Villarán", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/4.png", "1250", "Surrealismo", "120cms x 75cms", "1998");
-const obra6 = new obras("Mujer del Bosque", "Gabriel Villarán", "https://tomorregoa.github.io/ProyectoSemestral/src/images/gallery/4.png", "1250", "Surrealismo", "120cms x 75cms", "1998");
+const obra1 = new obras("Caballero y Luna", "Manuel Fernández", "src/images/gallery/1.png", "800", "Realismo", "180cms x 100cms", "2018");
+const obra2 = new obras("Ciervo Poligonal", "Andrea Ramírez", "src/images/gallery/2.png", "785", "Impresionismo", "150cms x 95cms", "2020");
+const obra3 = new obras("Olas de Colores", "Romina García", "src/images/gallery/3.png", "850", "Expresionismo", "200cms x 150cms", "2006");
+const obra4 = new obras("Mujer del Bosque", "Gabriel Villarán", "src/images/gallery/4.png", "1250", "Surrealismo", "120cms x 75cms", "1998");
+const obra5 = new obras("Pop Art Comic", "Andrea Ramírez", "src/images/gallery/5.png", "970", "Arte Pop", "120cms x 75cms", "1998");
+const obra6 = new obras("Ojos", "Romina García", "src/images/gallery/6.png", "1550", "Arte abstracto", "120cms x 75cms", "1998");
+const obra7 = new obras("Frutas", "Manuel Fernández", "src/images/gallery/7.png", "1260", "Hiperrealismo", "120cms x 75cms", "1998");
 
-const obrasArray = [obra1, obra2, obra3, obra4, obra5, obra6];
+
+const obrasArray = [obra1, obra2, obra3, obra4, obra5, obra6, obra7];
 
 // Recorremos el array con objetos "obra" y lo imprimimos en la sección de galeria
 function printObras() {
@@ -149,7 +141,7 @@ function printObras() {
                             <li>Medidas: ${item.medidas}</li>
                             <li>Año: ${item.annio}</li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-danger">Ver Detalles</button>
+                        <button type="button" class="btn btn-lg btn-block btn-danger popupimage">Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                     </div>
                 </div>`
 
@@ -213,3 +205,12 @@ $(document).ready(function () {
         });
     })
 })
+
+//Modal para las imagenes de la galería
+$(document).ready(function () {
+    $('.popupimage').click(function (event) {
+        event.preventDefault();
+        $('.modal img').attr('src', $(this).attr('href'));
+        $('.modal').modal('show');
+    });
+});
