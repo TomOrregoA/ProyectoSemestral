@@ -141,7 +141,7 @@ function printObras() {
                             <li>Medidas: ${item.medidas}</li>
                             <li>Año: ${item.annio}</li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-danger popupimage">Agregar al carrito <i class="fas fa-cart-plus"></i></button>
+                        <button id="agregarCarrito" class="btn btn-lg btn-block btn-danger">Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                     </div>
                 </div>`
 
@@ -162,7 +162,7 @@ $(document).ready(function () {
         let mensaje = document.querySelector("#mensaje");
         let found = false;
 
-        mensaje.classList.add("oculto");
+        mensaje.classList.add("d-none");
 
         document.querySelectorAll("#carta").forEach(item => {
             let autor = item.querySelector("#autor").innerHTML;
@@ -171,40 +171,41 @@ $(document).ready(function () {
             if (filtroArtista != '') {
                 if (filtroArtista == autor) {
                     if (filtroEstilo == "Escoja Estilo" || filtroEstilo == estilo) {
-                        item.classList.remove("oculto");
-                        mensaje.classList.add("oculto");
+                        item.classList.remove("d-none");
+                        mensaje.classList.add("d-none");
                         found = true;
                     } else {
-                        item.classList.add("oculto");
+                        item.classList.add("d-none");
                         if (found == false) {
-                            mensaje.classList.remove("oculto");
+                            mensaje.classList.remove("d-none");
                         }
                     }
 
                 } else {
-                    item.classList.add("oculto");
+                    item.classList.add("d-none");
                     if (found == false) {
-                        mensaje.classList.remove("oculto");
+                        mensaje.classList.remove("d-none");
                     }
                 }
             } else if (filtroArtista == '' && filtroEstilo != "Escoja Estilo") {
                 if (filtroEstilo == estilo) {
-                    item.classList.remove("oculto");
-                    mensaje.classList.add("oculto");
+                    item.classList.remove("d-none");
+                    mensaje.classList.add("d-none");
                     found = true;
                 } else {
-                    item.classList.add("oculto");
+                    item.classList.add("d-none");
                     if (found == false) {
-                        mensaje.classList.remove("oculto");
+                        mensaje.classList.remove("d-none");
                     }
                 }
             } else if(filtroArtista == '' && filtroEstilo == "Escoja Estilo") {
-                item.classList.remove("oculto");
-                mensaje.classList.add("oculto");
+                item.classList.remove("d-none");
+                mensaje.classList.add("d-none");
             }
         });
     })
 })
+
 
 //Modal para las imagenes de la galería
 $(document).ready(function () {
@@ -214,3 +215,17 @@ $(document).ready(function () {
         $('.modal').modal('show');
     });
 });
+
+
+let cartCount = document.querySelector("#cartCount");
+let contador = 0;
+//Agregar obras al carro
+$(document).ready(()=>{
+    document.querySelectorAll("#agregarCarrito").forEach(item=>{
+        item.addEventListener("click", ()=>{
+            contador += 1;
+            cartCount.innerHTML = contador;
+            console.log("click");
+        });
+    });
+})

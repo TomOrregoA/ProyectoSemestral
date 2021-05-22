@@ -182,9 +182,27 @@ a {
     font-size: 2rem;
 }
 
-.card-img-top:hover {
-    filter: grayscale(75%);
+.popupimage {
+    position: relative;
     transition: all 500ms ease-in-out;
+}
+
+.popupimage:hover { 
+    display: block;
+    transform: scale(1.01);
+    filter: grayscale(75%); 
+}
+
+.popupimage:hover + .hide{
+    display: block;
+}
+
+.fa-search-plus{
+    font-size: 1rem;
+}
+
+.popupimage.fa-search-plus:hover{
+    transform: scale(1.01);
 }
 
 .precio {
