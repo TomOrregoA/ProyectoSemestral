@@ -36,6 +36,82 @@ $(document).ready(function () {
     });
 });
 
+// Validación formulario de registro
+$(document).ready(function () {
+    $("#formularioReg").validate({
+        rules: {
+            rUsuario: {
+                required: true,
+                minlength: 8
+            },
+            rPassword: {
+                required: true,
+                minlength: 8
+            },
+            rPassword2: {
+                required: true,
+                equalTo: "#rPassword"
+            },
+            rNombres: {
+                required: true
+            },
+            rApellidos: {
+                required: true
+            },
+            rCorreo: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            rUsuario: {
+                required: "Debe ingresar un nombre de Usuario.",
+                minlength: "El nombre de usuario debe tener 8 carácteres como mínimo."
+            },
+            rPassword: {
+                required: "Debe ingresar una contraseña.",
+                minlength: "La contraseña debe tener un mínimo de 10 caractéres."
+            },
+            rPassword2: {
+                required: "Debe ingresar una contraseña.",
+                equalTo: "Ámbas contraseñas deben coincidir."
+            },
+            rNombres: {
+                required: "Debe ingresar su(s) nombre(s)."
+            },
+            rApellidos: {
+                required: "Debe ingresar su(s) apellido(s)."
+            },
+            rCorreo: {
+                required: "Debe ingresar su correo electrónico.",
+                email: "El correo electrónico ingresado debe ser válido."
+            }
+        }
+    });
+});
+
+// Validación formulario de Ingreso
+$(document).ready(function () {
+    $("#formularioLog").validate({
+        rules: {
+            lUsuario: {
+                required: true
+            },
+            lPassword: {
+                required: true
+            }
+        },
+        messages: {
+            lUsuario: {
+                required: "Debe ingresar su nombre de Usuario."
+            },
+            lPassword: {
+                required: "Debe ingresar su contraseña."
+            }
+        }
+    });
+});
+
 //Variables globales para la sección de api-dolar
 let divisaActual = 'USD';
 const galeria = document.querySelector("#mostrador");
