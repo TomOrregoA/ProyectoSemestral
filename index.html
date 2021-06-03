@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
     <!-- Header -->
     <header class="header justify-content-sm-center" id="header">
         <div class="container-fluid">
@@ -25,15 +26,20 @@
                 <div class="py-5">
                     <ul class="nav usuario text-danger">
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="pages/login.html?rnd=132"><i class="fas fa-sign-in-alt"></i> <span
+                            <a class="nav-link text-danger" href="pages/login.html?rnd=132"><i
+                                    class="fas fa-sign-in-alt"></i> <span
                                     class="d-none d-md-inline-block text-dark">Ingresar</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="pages/register.html?rnd=132"><i class="fas fa-user-plus"></i> <span
+                            <a class="nav-link text-danger" href="pages/register.html?rnd=132"><i
+                                    class="fas fa-user-plus"></i> <span
                                     class="d-none d-md-inline-block text-dark">Registrarse</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="#"><i class="fas fa-shopping-cart"></i> <span class="text-dark">(<span id="cartCount">0</span>)</span></a>
+                            <a class="nav-link text-danger" href="#" data-toggle="canvas" data-target="#carroDeCompras"
+                                aria-expanded="false" aria-controls="carroDeCompras"><i
+                                    class="fas fa-shopping-cart"></i> <span class="text-dark">(<span
+                                        id="cartCount">0</span>)</span></a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -75,21 +81,42 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contacto">CONTACTO</a>
                         </li>
-                        <!-- <li class="nav-item">
-                                <form class="mt-3 mt-lg-0 ml-lg-3 d-flex align-items-center">
-                                    <span class="position-absolute pl-3 mr-4 search-icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                    <input type="search" class="form-control pl-6 text-center"
-                                        placeholder="Buscar Artista">
-                                </form>
-                            </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Header -->
+
+    <!-- Cart lateral menu -->
+
+    <div id="carroDeCompras" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100">
+        <header class="bs-canvas-header p-3 bg-danger overflow-auto">
+            <button type="button" class="bs-canvas-close float-left close" aria-label="Close"><span aria-hidden="true"
+                    class="text-light">&times;</span></button>
+            <h4 class="d-inline-block text-light mb-0 float-right">Carro de Compras</h4>
+        </header>
+        <div class="bs-canvas-content px-3 py-5">
+            <ul>
+                <li class="d-flex justify-content-around">
+                    <p>Cantidad</p>
+                    <p>Item</p>
+                    <p>Titulo</p>
+                    <p>Precio</p>
+                </li>
+                <li class="d-flex justify-content-around">
+                    <p>1</p>
+                    <div class="img-fluid">
+                        <img src="'src/images/gallery/4.png'" alt="" width="25px">
+                    </div>
+                    <p>Titulo</p>
+                    <p>$450</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- Cart lateral menu -->
 
     <!-- Carrousel -->
     <section>
@@ -239,11 +266,13 @@
                     <div class="card-body">
                         <form autocomplete="off" id="formulario" action="#" method="post">
                             <p>
-                                <label class="form-check-label" for="cNombres"><i class="far fa-user-circle"></i> Nombres*</label>
+                                <label class="form-check-label" for="cNombres"><i class="far fa-user-circle"></i>
+                                    Nombres*</label>
                                 <input type="text" class="form-control" id="cNombres" name="cNombres" required>
                             </p>
                             <p>
-                                <label class="form-check-label" for="cApellidos"><i class="far fa-address-card"></i> Apellidos*</label>
+                                <label class="form-check-label" for="cApellidos"><i class="far fa-address-card"></i>
+                                    Apellidos*</label>
                                 <input type="text" class="form-control" id="cApellidos" name="cApellidos" required>
                             </p>
                             <p>
@@ -259,7 +288,8 @@
                                     name="cCorreo" required>
                             </p>
                             <p>
-                                <label for="exampleFormControlTextarea1"><i class="far fa-sticky-note"></i> Escriba su Mensaje*</label>
+                                <label for="exampleFormControlTextarea1"><i class="far fa-sticky-note"></i> Escriba su
+                                    Mensaje*</label>
                                 <textarea class="form-control" id="cMensaje" name="cMensaje" rows="3" minlength="15"
                                     required></textarea>
                             </p>
